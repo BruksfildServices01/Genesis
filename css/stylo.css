@@ -1,0 +1,97 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eaeaea;
+    color: #444;
+}
+a {
+    color: inherit; /* Faz a cor do link ser a mesma do texto ao redor */
+    text-decoration: none; /* Remove o sublinhado */
+  }
+  
+
+header, .content-section, footer {
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+
+header {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding-bottom: 20px;
+}
+
+.product-image {
+    height: 140px;
+    padding: 10px;
+}
+
+.guarantee-seal {
+    width: 150px;
+    margin: 10px auto;
+    border-radius: 20px;
+}
+
+.arrow-left, .arrow-right {
+    width: 150px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.75);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #28a745;
+    }
+    50% {
+        background-color: #218838;
+    }
+    100% {
+        background-color: #28a745;
+    }
+}
+
+button {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease-in-out;
+    animation: glow 2s infinite ease-in-out, colorChange 6s infinite ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens se ajustem conforme o tamanho da tela */
+}
+
+.content-section {
+    flex: 1;
+    min-width: 150px; /* Garante que os selos de garantia tenham espaço suficiente */
+    margin: 5px;
+}
